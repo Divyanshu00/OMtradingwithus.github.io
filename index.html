@@ -56,10 +56,14 @@
       margin: 40px auto;
     }
 
-    .images-container img {
-      max-width: 150px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      .images-container img {
+    width: 200px;            /* fixed width */
+    height: 150px;           /* fixed height */
+    object-fit: cover;       /* crops to fill box nicely */
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
     }
 
     footer {
