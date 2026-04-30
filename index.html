@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OM Trading | Fertilizers, Seeds, Sand, Gravel, Rod & Cement</title>
   <meta name="description" content="OM Trading supplies fertilizers, seeds, sand, gravel, rod, cement and related materials with retail and delivery support." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f5f1e8;
@@ -20,6 +20,7 @@
       --primary: #1f5c4a;
       --primary-dark: #17483a;
       --accent: #b7791f;
+      --accent-soft: #fff4de;
       --shadow: 0 10px 30px rgba(31, 41, 51, 0.08);
       --radius: 18px;
       --radius-sm: 12px;
@@ -65,7 +66,7 @@
       padding: 18px 0;
       border-bottom: 1px solid rgba(31, 41, 51, 0.08);
       backdrop-filter: blur(6px);
-      background: rgba(245, 241, 232, 0.8);
+      background: rgba(245, 241, 232, 0.88);
       position: sticky;
       top: 0;
       z-index: 50;
@@ -96,6 +97,7 @@
       font-weight: 800;
       letter-spacing: 1px;
       box-shadow: var(--shadow);
+      flex-shrink: 0;
     }
 
     .brand-text h1 {
@@ -121,6 +123,7 @@
       color: var(--muted);
       font-weight: 600;
       font-size: 0.95rem;
+      transition: color 0.25s ease;
     }
 
     .nav a:hover {
@@ -262,7 +265,7 @@
     }
 
     .section {
-      padding: 36px 0 28px;
+      padding: 40px 0 30px;
     }
 
     .section-head {
@@ -314,7 +317,7 @@
       margin-bottom: 16px;
       background: rgba(31,92,74,0.10);
       color: var(--primary);
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       font-weight: 800;
     }
 
@@ -326,6 +329,21 @@
     .card p {
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .product-links .card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-links .card::after {
+      content: "View details";
+      margin-top: 16px;
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.94rem;
     }
 
     .about-wrap {
@@ -390,6 +408,122 @@
 
     .contact-meta strong {
       color: var(--text);
+    }
+
+    .product-detail {
+      padding: 34px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .product-detail + .product-detail {
+      padding-top: 10px;
+    }
+
+    .product-box {
+      background: var(--surface);
+      border: 1px solid rgba(31, 41, 51, 0.08);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+    }
+
+    .product-image-wrap {
+      min-height: 100%;
+      background: var(--surface-2);
+    }
+
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .product-tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #8a5a12;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .product-content h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+      line-height: 1.2;
+      color: #162027;
+    }
+
+    .product-content p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .detail-panel {
+      background: var(--surface-2);
+      border: 1px solid rgba(31, 41, 51, 0.06);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .detail-panel h4 {
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      color: var(--muted);
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.95rem;
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 9px;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 4px;
     }
 
     .gallery {
@@ -477,7 +611,8 @@
 
     @media (max-width: 1024px) {
       .hero-grid,
-      .about-wrap {
+      .about-wrap,
+      .product-layout {
         grid-template-columns: 1fr;
       }
 
@@ -487,6 +622,10 @@
 
       .gallery {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-image-wrap img {
+        min-height: 300px;
       }
     }
 
@@ -505,7 +644,8 @@
 
       .grid-3,
       .gallery,
-      .stats {
+      .stats,
+      .detail-grid {
         grid-template-columns: 1fr;
       }
 
@@ -513,12 +653,15 @@
       .about-box,
       .contact-box,
       .card,
-      .cta-strip {
+      .cta-strip,
+      .product-content {
         padding: 22px 18px;
       }
 
-      .gallery img {
+      .gallery img,
+      .product-image-wrap img {
         height: 220px;
+        min-height: 220px;
       }
 
       .btn {
@@ -546,6 +689,7 @@
 
       <nav class="nav">
         <a href="#products">Products</a>
+        <a href="#materials">Materials</a>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
@@ -606,7 +750,7 @@
             <h3>Our Products & Services</h3>
           </div>
           <p>
-            We serve customers looking for essential construction and agricultural supply items with convenient purchase and delivery support.
+            Good product pages should clearly show what the item is, include quality images, explain benefits in simple bullets, and guide the visitor to contact or order, so this section is designed to do exactly that for your materials business. [web:6][web:5]
           </p>
         </div>
 
@@ -632,6 +776,277 @@
       </div>
     </section>
 
+    <section class="section product-links" id="materials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Material Details</h3>
+          </div>
+          <p>
+            Visitors can open these sections to see images, quality points, and the main benefits of each product before contacting you.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <a href="#gravel" class="card">
+            <div class="card-icon">G</div>
+            <h4>Gravel</h4>
+            <p>Strong base material for concrete work, foundations and construction use.</p>
+          </a>
+
+          <a href="#sand" class="card">
+            <div class="card-icon">S</div>
+            <h4>Sand</h4>
+            <p>Clean construction sand for plaster, masonry and building support work.</p>
+          </a>
+
+          <a href="#cement" class="card">
+            <div class="card-icon">C</div>
+            <h4>Cement</h4>
+            <p>Reliable binding material for walls, roofs, slabs and house construction.</p>
+          </a>
+
+          <a href="#rod" class="card">
+            <div class="card-icon">R</div>
+            <h4>Rod / TMT Bar</h4>
+            <p>Reinforcement material used for stronger structural support and stability.</p>
+          </a>
+
+          <a href="#seeds" class="card">
+            <div class="card-icon">SD</div>
+            <h4>Seeds</h4>
+            <p>Useful agricultural seeds selected for local farming and planting needs.</p>
+          </a>
+
+          <a href="#contact" class="card">
+            <div class="card-icon">06</div>
+            <h4>Need Pricing?</h4>
+            <p>Call or email us directly for availability, rates and delivery information.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail" id="gravel">
+      <div class="container">
+        <div class="product-box">
+          <div class="product-layout">
+            <div class="product-image-wrap">
+              <img src="image/download.jpg" alt="Gravel material for construction work">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">Construction Material</span>
+              <h3>Gravel</h3>
+              <p>
+                Gravel is an essential building material used for concrete work, drainage layers, base filling, and strong foundation support in different types of house construction.
+              </p>
+
+              <div class="detail-grid">
+                <div class="detail-panel">
+                  <h4>Quality Highlights</h4>
+                  <ul class="feature-list">
+                    <li>Well-sorted material for practical site use.</li>
+                    <li>Suitable for base work and concrete mixing needs.</li>
+                    <li>Useful for strength and support in construction areas.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-panel">
+                  <h4>Benefits</h4>
+                  <ul class="feature-list">
+                    <li>Helps improve foundation stability.</li>
+                    <li>Supports stronger concrete structure.</li>
+                    <li>Useful for durable and dependable site preparation.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a class="btn btn-primary" href="tel:+918409412511">Ask About Gravel</a>
+                <a class="btn btn-secondary" href="mailto:om.tradingwithus@gmail.com?subject=Enquiry%20for%20Gravel">Email for Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail" id="sand">
+      <div class="container">
+        <div class="product-box">
+          <div class="product-layout">
+            <div class="product-image-wrap">
+              <img src="image/download (1).jpg" alt="Construction sand for masonry and plaster work">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">Construction Material</span>
+              <h3>Sand</h3>
+              <p>
+                Sand is used in masonry, plastering, concrete work, and finishing jobs where clean texture and proper use matter for better construction output.
+              </p>
+
+              <div class="detail-grid">
+                <div class="detail-panel">
+                  <h4>Quality Highlights</h4>
+                  <ul class="feature-list">
+                    <li>Useful for regular construction and finishing work.</li>
+                    <li>Suitable for masonry and plaster requirements.</li>
+                    <li>Practical material for site use and daily supply needs.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-panel">
+                  <h4>Benefits</h4>
+                  <ul class="feature-list">
+                    <li>Supports smoother finishing work.</li>
+                    <li>Helps in dependable bonding during construction use.</li>
+                    <li>Useful for house building and repair requirements.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a class="btn btn-primary" href="tel:+918409412511">Ask About Sand</a>
+                <a class="btn btn-secondary" href="mailto:om.tradingwithus@gmail.com?subject=Enquiry%20for%20Sand">Email for Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail" id="cement">
+      <div class="container">
+        <div class="product-box">
+          <div class="product-layout">
+            <div class="product-image-wrap">
+              <img src="image/download (2).jpg" alt="Cement used for construction and house building">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">Core Building Supply</span>
+              <h3>Cement</h3>
+              <p>
+                Cement is one of the main materials used in house building, concrete work, wall construction, slab support, and general structural applications.
+              </p>
+
+              <div class="detail-grid">
+                <div class="detail-panel">
+                  <h4>Quality Highlights</h4>
+                  <ul class="feature-list">
+                    <li>Reliable material for common construction needs.</li>
+                    <li>Useful for strong binding and structural use.</li>
+                    <li>Suitable for regular home and site building work.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-panel">
+                  <h4>Benefits</h4>
+                  <ul class="feature-list">
+                    <li>Supports strong and steady construction work.</li>
+                    <li>Useful for durability in house building projects.</li>
+                    <li>Helps in smooth progress of site-related material needs.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a class="btn btn-primary" href="tel:+918409412511">Ask About Cement</a>
+                <a class="btn btn-secondary" href="mailto:om.tradingwithus@gmail.com?subject=Enquiry%20for%20Cement">Email for Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail" id="rod">
+      <div class="container">
+        <div class="product-box">
+          <div class="product-layout">
+            <div class="product-image-wrap">
+              <img src="image/download (3).jpg" alt="Steel rods or TMT bars for construction reinforcement">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">Structural Support</span>
+              <h3>Rod / TMT Bar</h3>
+              <p>
+                Rods and TMT bars are used for reinforcement in columns, beams, slabs, and house structures where strong support and safety are important.
+              </p>
+
+              <div class="detail-grid">
+                <div class="detail-panel">
+                  <h4>Quality Highlights</h4>
+                  <ul class="feature-list">
+                    <li>Strong reinforcement material for structural work.</li>
+                    <li>Useful in core house building applications.</li>
+                    <li>Suitable for practical site and framework needs.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-panel">
+                  <h4>Benefits</h4>
+                  <ul class="feature-list">
+                    <li>Improves structural support and strength.</li>
+                    <li>Useful for long-lasting building reinforcement.</li>
+                    <li>Helps provide better safety in construction work.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a class="btn btn-primary" href="tel:+918409412511">Ask About Rod</a>
+                <a class="btn btn-secondary" href="mailto:om.tradingwithus@gmail.com?subject=Enquiry%20for%20Rod">Email for Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail" id="seeds">
+      <div class="container">
+        <div class="product-box">
+          <div class="product-layout">
+            <div class="product-image-wrap">
+              <img src="image/download.jpg" alt="Agricultural seeds for farming and planting needs">
+            </div>
+            <div class="product-content">
+              <span class="product-tag">Agriculture Supply</span>
+              <h3>Seeds</h3>
+              <p>
+                Seeds are an important part of agricultural supply, and OM Trading supports customers looking for useful seed options for local farming and planting work.
+              </p>
+
+              <div class="detail-grid">
+                <div class="detail-panel">
+                  <h4>Quality Highlights</h4>
+                  <ul class="feature-list">
+                    <li>Useful for seasonal and regular agricultural needs.</li>
+                    <li>Suitable for practical planting support.</li>
+                    <li>Part of OM Trading’s local agriculture supply range.</li>
+                  </ul>
+                </div>
+
+                <div class="detail-panel">
+                  <h4>Benefits</h4>
+                  <ul class="feature-list">
+                    <li>Supports farming and crop-related activities.</li>
+                    <li>Useful for customer convenience in one place.</li>
+                    <li>Helps buyers access essential agriculture items easily.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-actions">
+                <a class="btn btn-primary" href="tel:+918409412511">Ask About Seeds</a>
+                <a class="btn btn-secondary" href="mailto:om.tradingwithus@gmail.com?subject=Enquiry%20for%20Seeds">Email for Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="about">
       <div class="container about-wrap">
         <div class="about-box">
@@ -645,9 +1060,9 @@
           </p>
 
           <ul class="about-list">
-           <li>Authorized and practical supply categories for local customer needs.</li>
-           <li>Simple buying process with support for both retail and delivery.</li>
-           <li>Professional communication for product and order-related queries.</li>
+            <li>Authorized and practical supply categories for local customer needs.</li>
+            <li>Simple buying process with support for both retail and delivery.</li>
+            <li>Professional communication for product and order-related queries.</li>
           </ul>
         </div>
 
@@ -682,26 +1097,26 @@
             <h3>Gallery</h3>
           </div>
           <p>
-            Replace or keep these current business images to present your products and supply work in a cleaner visual layout.
+            Good product pages for building materials benefit from strong, clear photos because better visuals help communicate trust, quality, and real-world use more effectively than text alone. [web:6][web:5]
           </p>
         </div>
 
         <div class="gallery">
           <figure>
-            <img src="image/download.jpg" alt="OM Trading product image 1">
-            <figcaption>Product and supply image</figcaption>
+            <img src="image/download.jpg" alt="OM Trading gravel or material image">
+            <figcaption>Construction material display</figcaption>
           </figure>
           <figure>
-            <img src="image/download (1).jpg" alt="OM Trading product image 2">
-            <figcaption>Business material showcase</figcaption>
+            <img src="image/download (1).jpg" alt="OM Trading sand or site material image">
+            <figcaption>Site-ready material support</figcaption>
           </figure>
           <figure>
-            <img src="image/download (2).jpg" alt="OM Trading product image 3">
-            <figcaption>Available item category</figcaption>
+            <img src="image/download (2).jpg" alt="OM Trading cement related image">
+            <figcaption>Reliable building supply range</figcaption>
           </figure>
           <figure>
-            <img src="image/download (3).jpg" alt="OM Trading product image 4">
-            <figcaption>Retail and delivery support</figcaption>
+            <img src="image/download (3).jpg" alt="OM Trading reinforcement material image">
+            <figcaption>Retail and delivery service</figcaption>
           </figure>
         </div>
 
